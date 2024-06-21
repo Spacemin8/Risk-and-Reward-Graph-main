@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    position: relative;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    word-break: break-word;
+  }
+  
+  *[class*="hover:"] {
+    transition: color .4s, background-color .4s, left .4s, opacity .4s, transform .4s;
+  }
+  
+  .left-anim {
+    transition: left .4s, opacity .4s;
+  }
+
+  *[class^="left"] {
+    transition: color .2s;
+  }
+
+  *:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+  }
+
+  html {
+    @apply bg-main-bg
+  }
+
+  body {
+    @apply text-black bg-main-bg text-base font-light max-w-[2200px] mx-auto min-h-[100vh] flex flex-col
+  }
+
+  /* Custom Scroll bar */
+  ::-webkit-scrollbar {
+    width: .3rem;
+    height: .3rem;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #c1e2ff;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #191d43ac;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #000;
+  }
+
+  /* Custom Scroll bar END */
+
+  input, textarea {
+    outline: 0 none;
+    background: transparent;
+  }
+
+  *::placeholder {
+    opacity: .38;
+    color: #2d2d2d;
+  }
+
+  img {
+    object-fit: contain;
+  }
+}
+
+@layer components {
+}
